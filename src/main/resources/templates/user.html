@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--<table>-->
+<!--  <thead>-->
+<!--  <tr>-->
+<!--    <th>ID</th>-->
+<!--    <th>Name</th>-->
+<!--    <th>Age</th>-->
+<!--    <th>Address</th>-->
+<!--  </tr>-->
+<!--  </thead>-->
+<!--  <tbody>-->
+<!--  <tr th:each="a : ${users}">-->
+<!--    <td th:text="${a.id}"></td>-->
+<!--    <td th:text="${a.name}"></td>-->
+<!--    <td th:text="${a.age}"></td>-->
+<!--    <td th:text="${a.address}"></td>-->
+<!--  </tr>-->
+
+<!--  </tbody>-->
+<!--</table>-->
+<table>
+  <thead>
+  <tr>
+    <td>id</td>
+    <td>name</td>
+    <td>age</td>
+    <td>address</td>
+  </tr>
+  </thead>
+  <tbody>
+  <!--    cach 1-->
+  <tr th:each="user : ${listUser}">
+    <td th:text="${user.id}"></td>
+    <td th:text="${user.name}"></td>
+    <td th:text="${user.age}"></td>
+    <td th:text="${user.address}"></td>
+  </tr>
+  <!--    &lt;!&ndash;    cach 2 giong c:foreach&ndash;&gt;-->
+  <!--    <th:block th:each="user : ${listUser}">-->
+  <!--        <tr>-->
+  <!--            <td th:text="${user.id}"></td>-->
+  <!--            <td th:text="${user.name}"></td>-->
+  <!--            <td th:text="${user.age}"></td>-->
+  <!--            <td th:text="${user.address}"></td>-->
+  <!--        </tr>-->
+  <!--    </th:block>-->
+  </tbody>
+
+</table>
+</body>
+</html>
